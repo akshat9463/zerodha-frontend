@@ -32,8 +32,8 @@ const Signup = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:8080/signup",
-        // "https://zerodha-backend-obxc.onrender.com/signup",
+        // "http://localhost:8080/signup",
+        "https://zerodha-backend-obxc.onrender.com/signup",
         {
           ...inputValue,
         },
@@ -43,7 +43,7 @@ const Signup = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          window.location.href = "http://localhost:3001";
+          window.location.href = "https://zerodha-dashboard-uu4u.onrender.com";
         }, 1000);
       } else {
         handleError(message);
