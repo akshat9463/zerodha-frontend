@@ -15,8 +15,8 @@ function Team() {
             src="media/images/myPic.png"
             style={{ borderRadius: "100%", width: "40%" }}
           />
-          <h4 className="mt-3">Nithin Kamath</h4>
-          <h6>Founder, CEO</h6>
+          <h4 className="mt-3">Akshat Kanaujiya</h4>
+          <h6>Inspiring Software Engineer</h6>
         </div>
         <div className="col-6 mt-3" style={{lineHeight:"2rem"}}>
           <p>

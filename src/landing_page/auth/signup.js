@@ -43,7 +43,7 @@ const Signup = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          window.location.href = "https://zerodha-dashboard-uu4u.onrender.com";
+          window.location.href = "http://localhost:3001";
         }, 1000);
       } else {
         handleError(message);
