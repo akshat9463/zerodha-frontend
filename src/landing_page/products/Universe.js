@@ -1,44 +1,52 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Universe() {
   return (
-    <div className="container">
+    <div className="container py-5">
+      {/* Heading */}
+      <div className="row text-center mb-4">
+        <div className="col">
+          <h1>The Zerodha Universe</h1>
+          <p>
+            Extend your trading and investment experience even further with our
+            partner platforms
+          </p>
+        </div>
+      </div>
+
+      {/* Platform Logos Grid */}
       <div className="row text-center">
-        <h1>The Zerodha Universe</h1>
-        <p>
-          Extend your trading and investment experience even further with our
-          partner platforms
-        </p>
-        <div className="col-4 p-3 mt-5">
-          <img src="media/images/smallcaseLogo.png" style={{width:"40%"}} />
-          <p className="text-small text-muted">Thematic investment platform</p>
+        {[
+          { src: "/media/images/smallcaseLogo.png", alt: "Smallcase" },
+          { src: "/media/images/streakLogo.png", alt: "Streak" },
+          { src: "/media/images/sensibullLogo.svg", alt: "Sensibull" },
+          { src: "/media/images/zerodhaFundhouse.png", alt: "Zerodha Fundhouse" },
+          { src: "/media/images/goldenpiLogo.png", alt: "GoldenPi" },
+          { src: "/media/images/dittoLogo.png", alt: "Ditto" },
+        ].map((item, index) => (
+          <div key={index} className="col-6 col-md-4 mb-4">
+            <img
+              src={item.src}
+              alt={item.alt}
+              className="img-fluid mb-2"
+              style={{ maxWidth: "120px" }}
+            />
+            <p className="text-muted">Thematic investment platform</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Signup Button */}
+      <div className="row">
+        <div className="col text-center">
+          <Link
+            className="btn btn-primary px-4 py-2 mt-3"
+            style={{ fontSize: "0.9rem", color:"white"}}
+            to='/signup'>
+            Signup Now
+          </Link>
         </div>
-        <div className="col-4 p-3 mt-5">
-          <img src="media/images/streakLogo.png" style={{width:"40%"}}/>
-          <p className="text-small text-muted">Thematic investment platform</p>
-        </div>
-        <div className="col-4 p-3 mt-5">
-          <img src="media/images/sensibullLogo.svg" style={{width:"40%"}} />
-          <p className="text-small text-muted">Thematic investment platform</p>
-        </div>
-        <div className="col-4 p-3 mt-5">
-          <img src="media/images/zerodhaFundhouse.png" style={{width:"40%"}} />
-          <p className="text-small text-muted">Thematic investment platform</p>
-        </div>
-        <div className="col-4 p-3 mt-5">
-          <img src="media/images/goldenpiLogo.png" style={{width:"40%"}} />
-          <p className="text-small text-muted">Thematic investment platform</p>
-        </div>
-        <div className="col-4 p-3 mt-5">
-          <img src="media/images/dittoLogo.png" style={{width:"40%"}} />
-          <p className="text-small text-muted">Thematic investment platform</p>
-        </div>
-         <button
-          className="btn btn-primary fs-.8 p-2 mb-3 mt-4"
-          style={{ width: "20%", margin: "0 auto" }}
-        >
-          Signup Now
-        </button>
       </div>
     </div>
   );

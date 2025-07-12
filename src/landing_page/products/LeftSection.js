@@ -10,29 +10,46 @@ function LeftSection({
   appStore,
 }) {
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-6 p-3">
-          <img src={imageURL}></img>
+    <div className="container py-5">
+      <div className="row align-items-center">
+        {/* Left Image Section */}
+        <div className="col-12 col-md-6 text-center mb-4 mb-md-0">
+          <img src={imageURL} alt={productName} className="img-fluid" />
         </div>
-        <div className="col-6 p-3 mt-5">
-          <h1>{productName}</h1>
-          <p>{productDescription}</p>
-          <a href="" style={{ textDecoration: "none" }}>
-            tryDemo &nbsp;&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-          </a>
-          &nbsp;&nbsp;&nbsp;
-          <a href="" style={{ textDecoration: "none" }}>
-            learnMore &nbsp;&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-          </a>
-          <br/>
-          <div className="mt-5">
-          <a href={googlePlay}>
-            <img src="\media\images\googlePlayBadge.svg"></img>
-          </a>
-          <a href={appStore} style={{marginLeft:'1rem'}}>
-            <img src="\media\images\appstoreBadge.svg"></img>
-          </a>
+
+        {/* Right Content Section */}
+        <div className="col-12 col-md-6 px-4">
+          <h2 className="mb-3">{productName}</h2>
+          <p className="text-muted">{productDescription}</p>
+
+          {/* Links */}
+          <div className="mb-4">
+            <a href="#" style={{ textDecoration: "none" }} className="me-4">
+              {tryDemo} <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a href="#" style={{ textDecoration: "none" }}>
+              {learnMore} <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          {/* Download Badges */}
+          <div>
+            <a href={googlePlay}>
+              <img
+                src="/media/images/googlePlayBadge.svg"
+                alt="Google Play Store"
+                className="img-fluid"
+                style={{ maxWidth: "150px" }}
+              />
+            </a>
+            <a href={appStore} className="ms-3">
+              <img
+                src="/media/images/appstoreBadge.svg"
+                alt="Apple App Store"
+                className="img-fluid"
+                style={{ maxWidth: "150px" }}
+              />
+            </a>
           </div>
         </div>
       </div>

@@ -3,75 +3,59 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav
-      className="navbar navbar-expand-lg border-bottom sticky-top"
-      style={{ backgroundColor: "#fff" }}
-    >
-      <div className="container-fluid container">
-        <div className="row">
-          <div className="col-4">
-            <Link to="/">
-            <img
-              className="mt-2"
-              src="/media/images/logo.svg"
-              style={{ width: "50%" }}
-              alt="logo"
-            />
-            </Link>
-          </div>
-          <div className="col-5"></div>
-          {/* Toggler for mobile */}
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+    <nav className="navbar navbar-expand-lg sticky-top border-bottom" style={{ backgroundColor: "#fff" }}>
+      <div className="container">
+        {/* Logo */}
+        <Link className="navbar-brand" to="/">
+          <img
+            src="/media/images/logo.svg"
+            alt="logo"
+            style={{ width: "120px" }}
+          />
+        </Link>
 
-          {/* Collapse div pushed to right */}
-          <div className="col-3 text-center">
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
-              <ul className="navbar-nav  mb-2 mb-lg-0">
-                <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="/signup">
-                    Signup
-                  </Link>
-                </li>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <li className="nav-item">
-                  <Link className="nav-link active" to="/about">
-                    About
-                  </Link>
-                </li>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <li className="nav-item">
-                  <Link className="nav-link active" aria-disabled="true" to="/products">
-                    Products
-                  </Link>
-                </li>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <li className="nav-item">
-                  <Link className="nav-link active" aria-disabled="true" to="/pricing">
-                    Pricing
-                  </Link>
-                </li>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <li className="nav-item">
-                  <Link className="nav-link active" aria-disabled="true" to="/support">
-                    Support
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
+        {/* Toggler for mobile */}
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        {/* Navbar links */}
+        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link className="nav-link active" to="/signup">
+                Signup
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">
+                About
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/products">
+                Products
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/pricing">
+                Pricing
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/support">
+                Support
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>

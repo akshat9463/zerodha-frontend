@@ -2,38 +2,50 @@ import React from "react";
 
 function Team() {
   return (
-    <div className="container p-4">
-      <div className="row text-center border-top">
-        <h1 className=" p-3 mt-3">People</h1>
+    <div className="container py-5">
+      {/* Section Title */}
+      <div className="row border-top">
+        <div className="col-12 text-center mt-4">
+          <h1 className="p-3">People</h1>
+        </div>
       </div>
+
+      {/* Profile Section */}
       <div
-        className="row mt-4 p-2 text-muted"
-        style={{ fontSize: "1rem", lineHeight: "1.5rem" }}
+        className="row align-items-center mt-3 text-muted"
+        style={{ fontSize: "1rem", lineHeight: "1.6rem" }}
       >
-        <div className="col-6 text-center">
+        {/* Left: Image & Name */}
+        <div className="col-12 col-md-6 text-center mb-4 mb-md-0">
           <img
-            src="media/images/myPic.png"
-            style={{ borderRadius: "100%", width: "40%" }}
+            src="/media/images/myPic.png"
+            alt="Akshat Kanaujiya"
+            className="img-fluid"
+            style={{ borderRadius: "50%", maxWidth: "200px" }}
           />
           <h4 className="mt-3">Akshat Kanaujiya</h4>
           <h6>Inspiring Software Engineer</h6>
         </div>
-        <div className="col-6 mt-3" style={{lineHeight:"2rem"}}>
+
+        {/* Right: Bio */}
+        <div className="col-12 col-md-6 text-center text-md-start px-3">
           <p>
-            My name is Akshat Kanaujiya. I have done my bacholor's degree 
-            from Lucknow Christian Degree College and my specialization is in 
-            Software Development. My deep interest is in web Development and 
-            I have made 3 full stack web dev projects by using Node.js and React.js.
+            My name is Akshat Kanaujiya. I completed my Bachelor's degree from
+            Lucknow Christian Degree College with a specialization in Software
+            Development. I have a deep interest in web development and have built
+            3 full-stack projects using Node.js and React.js.
           </p>
           <p>
-            Now I am continuing searching for opportunities so that I can work on 
-            real world projects and I will be very greatful for working with you. 
-            A part from that my hobbies are learning new things and Playing cricket.
+            Currently, I'm seeking opportunities to work on real-world projects,
+            and I would be grateful for the chance to collaborate. Outside of
+            tech, I enjoy learning new things and playing cricket.
           </p>
           <p>Playing cricket is my zen.</p>
           <p>
-            Connect on <a href="">Homepage</a> / <a href="">TradingQnA</a> /{" "}
-            <a href="">Twitter</a>
+            Connect with me on:&nbsp;
+            <a href="#" className="me-2">Homepage</a> /{" "}
+            <a href="#" className="me-2">TradingQnA</a> /{" "}
+            <a href="#">Twitter</a>
           </p>
         </div>
       </div>

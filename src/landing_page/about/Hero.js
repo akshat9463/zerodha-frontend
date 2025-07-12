@@ -2,22 +2,31 @@ import React from "react";
 
 function Hero() {
   return (
-    <div className="container p-4">
-      <div className="row mt-5 text-center">
-        <h1 className="fs-2 mb-4 p-4">
-          We pioneered the discount broking model in India
-          <br />
-          Now, we are breaking ground with our technology.
-        </h1>
+    <div className="container py-5">
+      {/* Headline */}
+      <div className="row text-center mb-4">
+        <div className="col-12">
+          <h1 className="fs-2 px-2">
+            We pioneered the discount broking model in India
+            <br className="d-none d-md-block" />
+            Now, we are breaking ground with our technology.
+          </h1>
+        </div>
       </div>
-        <hr />
-      <div className="row mt-4 p-5 text-muted" style={{fontSize:"1rem", lineHeight:"1.5rem"}}>
-        <div className="col-6 p-3">
-              <p>
+
+      <hr />
+
+      {/* Two Column Content */}
+      <div
+        className="row text-muted mt-4"
+        style={{ fontSize: "1rem", lineHeight: "1.6rem" }}
+      >
+        <div className="col-12 col-md-6 mb-4 mb-md-0 px-3">
+          <p>
             We kick-started operations on the 15th of August, 2010 with the goal
             of breaking all barriers that traders and investors face in India in
             terms of cost, support, and technology. We named the company
-            Zerodha, a combination of Zero and "Rodha", the Sanskrit word for
+            <strong> Zerodha</strong>, a combination of Zero and "Rodha", the Sanskrit word for
             barrier.
           </p>
           <p>
@@ -30,13 +39,14 @@ function Hero() {
             all Indian retail trading volumes.
           </p>
         </div>
-        <div className="col-6 p-3">
-             <p>
+
+        <div className="col-12 col-md-6 px-3">
+          <p>
             In addition, we run a number of popular open online educational and
             community initiatives to empower retail traders and investors.
           </p>
           <p>
-            <a href="" style={{ textDecoration: "none" }}>
+            <a href="#" style={{ textDecoration: "none" }}>
               Rainmatter
             </a>
             , our fintech fund and incubator, has invested in several fintech
